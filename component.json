@@ -1,0 +1,326 @@
+{
+    "title": "Rotten Tomatoes",
+    "description": "Test our API services using I/O Docs.",
+    "docsUrl": "http://developer.rottentomatoes.com/io-docs/docs",
+    "url": "https://api.apis.guru/v2/specs/rottentomatoes.com/1.0/swagger.json",
+    "envVars": {},
+    "credentials": {
+        "fields": {
+            "server": {
+                "label": "Server",
+                "viewClass": "SelectView",
+                "model": [
+                    "http://api.rottentomatoes.com/api/public/v1.0",
+                    "--- Custom URL"
+                ],
+                "required": true
+            },
+            "otherServer": {
+                "label": "Custom Server URL",
+                "viewClass": "TextFieldView"
+            },
+            "key": {
+                "label": "apikey (key)",
+                "viewClass": "TextFieldView"
+            }
+        }
+    },
+    "triggers": {
+        "startFlow": {
+            "main": "./lib/triggers/startFlow.js",
+            "type": "polling",
+            "title": "Start Flow",
+            "fields": {}
+        }
+    },
+    "actions": {
+        "ListsDirectoryTopLevelLists": {
+            "main": "./lib/actions/ListsDirectoryTopLevelLists.js",
+            "title": "ListsDirectoryTopLevelLists",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/ListsDirectoryTopLevelLists.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "DVDListsDirectoryTopLevelLists": {
+            "main": "./lib/actions/DVDListsDirectoryTopLevelLists.js",
+            "title": "DVDListsDirectoryTopLevelLists",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/DVDListsDirectoryTopLevelLists.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "CurrentReleaseDVDsDVDLists": {
+            "main": "./lib/actions/CurrentReleaseDVDsDVDLists.js",
+            "title": "CurrentReleaseDVDsDVDLists",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/CurrentReleaseDVDsDVDLists.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "NewReleaseDVDsDVDLists": {
+            "main": "./lib/actions/NewReleaseDVDsDVDLists.js",
+            "title": "NewReleaseDVDsDVDLists",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/NewReleaseDVDsDVDLists.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "TopRentalsDVDLists": {
+            "main": "./lib/actions/TopRentalsDVDLists.js",
+            "title": "TopRentalsDVDLists",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/TopRentalsDVDLists.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "UpcomingDVDsDVDLists": {
+            "main": "./lib/actions/UpcomingDVDsDVDLists.js",
+            "title": "UpcomingDVDsDVDLists",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/UpcomingDVDsDVDLists.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "MovieListsDirectoryTopLevelLists": {
+            "main": "./lib/actions/MovieListsDirectoryTopLevelLists.js",
+            "title": "MovieListsDirectoryTopLevelLists",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/MovieListsDirectoryTopLevelLists.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "BoxOfficeMovieLists": {
+            "main": "./lib/actions/BoxOfficeMovieLists.js",
+            "title": "BoxOfficeMovieLists",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/BoxOfficeMovieLists.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "InTheatersMovieLists": {
+            "main": "./lib/actions/InTheatersMovieLists.js",
+            "title": "InTheatersMovieLists",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/InTheatersMovieLists.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "OpeningMoviesMovieLists": {
+            "main": "./lib/actions/OpeningMoviesMovieLists.js",
+            "title": "OpeningMoviesMovieLists",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/OpeningMoviesMovieLists.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "UpcomingMoviesMovieLists": {
+            "main": "./lib/actions/UpcomingMoviesMovieLists.js",
+            "title": "UpcomingMoviesMovieLists",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/UpcomingMoviesMovieLists.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "MoviesAliasDetailedInfo": {
+            "main": "./lib/actions/MoviesAliasDetailedInfo.js",
+            "title": "MoviesAliasDetailedInfo",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/MoviesAliasDetailedInfo.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "MoviesSearchSearch": {
+            "main": "./lib/actions/MoviesSearchSearch.js",
+            "title": "MoviesSearchSearch",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/MoviesSearchSearch.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "MoviesInfoDetailedInfo": {
+            "main": "./lib/actions/MoviesInfoDetailedInfo.js",
+            "title": "MoviesInfoDetailedInfo",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/MoviesInfoDetailedInfo.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "CastInfoDetailedInfo": {
+            "main": "./lib/actions/CastInfoDetailedInfo.js",
+            "title": "CastInfoDetailedInfo",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/CastInfoDetailedInfo.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "MovieClipsDetailedInfo": {
+            "main": "./lib/actions/MovieClipsDetailedInfo.js",
+            "title": "MovieClipsDetailedInfo",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/MovieClipsDetailedInfo.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "MoviesReviewsDetailedInfo": {
+            "main": "./lib/actions/MoviesReviewsDetailedInfo.js",
+            "title": "MoviesReviewsDetailedInfo",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/MoviesReviewsDetailedInfo.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "MoviesSimilarDetailedInfo": {
+            "main": "./lib/actions/MoviesSimilarDetailedInfo.js",
+            "title": "MoviesSimilarDetailedInfo",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/MoviesSimilarDetailedInfo.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        }
+    }
+}

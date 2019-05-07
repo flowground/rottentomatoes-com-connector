@@ -1,0 +1,15 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "required": false,
+            "type": "string",
+            "default": "0031381"
+        },
+        "type": {
+            "required": false,
+            "type": "string",
+            "default": "imdb"
+        }
+    }
+}

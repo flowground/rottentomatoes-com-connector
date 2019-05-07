@@ -1,0 +1,30 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "required": true,
+            "type": "string",
+            "default": "770672122"
+        },
+        "review_type": {
+            "required": false,
+            "type": "string",
+            "default": "top_critic"
+        },
+        "page_limit": {
+            "required": false,
+            "type": "string",
+            "default": "20"
+        },
+        "page": {
+            "required": false,
+            "type": "string",
+            "default": "1"
+        },
+        "country": {
+            "required": false,
+            "type": "string",
+            "default": "us"
+        }
+    }
+}

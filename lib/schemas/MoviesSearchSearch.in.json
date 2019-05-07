@@ -1,0 +1,19 @@
+{
+    "type": "object",
+    "properties": {
+        "q": {
+            "required": false,
+            "type": "string"
+        },
+        "page_limit": {
+            "required": false,
+            "type": "string",
+            "default": "10"
+        },
+        "page": {
+            "required": false,
+            "type": "string",
+            "default": "1"
+        }
+    }
+}
